@@ -205,6 +205,14 @@
           </e>
         </e>
         <e p="Third Party" t="Include">
+          <e p="Simple UI" t="Include">
+            <e p="Fonts" t="Include">
+              <e p="OFL.txt" t="Include" />
+            </e>
+            <e p="Samples" t="Include">
+              <e p="IconPreview.cs" t="Include" />
+            </e>
+          </e>
           <e p="UnityChan" t="Include">
             <e p="Models" t="Include">
               <e p="UnityChanShader" t="Include">
