@@ -168,9 +168,11 @@
             <e p="UI" t="Include">
               <e p="Common" t="Include">
                 <e p="ButtonBehaviour.cs" t="Include" />
+                <e p="UIWindow.cs" t="Include" />
               </e>
               <e p="Settings" t="Include">
                 <e p="SaveButton.cs" t="Include" />
+                <e p="SettingsTransition.cs" t="Include" />
                 <e p="SettingsUIController.cs" t="Include" />
               </e>
             </e>
