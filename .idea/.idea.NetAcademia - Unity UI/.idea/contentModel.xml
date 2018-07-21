@@ -168,9 +168,20 @@
             <e p="UI" t="Include">
               <e p="Common" t="Include">
                 <e p="ButtonBehaviour.cs" t="Include" />
+                <e p="SceneNavigationButton.cs" t="Include" />
+                <e p="TextFlash.cs" t="Include" />
+                <e p="UIDialog.cs" t="Include" />
+                <e p="UIDialogResponseButton.cs" t="Include" />
+                <e p="UIModalOverlay.cs" t="Include" />
                 <e p="UIWindow.cs" t="Include" />
               </e>
+              <e p="MainMenu" t="Include">
+                <e p="ExitGameButton.cs" t="Include" />
+                <e p="MainMenuController.cs" t="Include" />
+                <e p="MainMenuState.cs" t="Include" />
+              </e>
               <e p="Settings" t="Include">
+                <e p="CancelButton.cs" t="Include" />
                 <e p="SaveButton.cs" t="Include" />
                 <e p="SettingsTransition.cs" t="Include" />
                 <e p="SettingsUIController.cs" t="Include" />
