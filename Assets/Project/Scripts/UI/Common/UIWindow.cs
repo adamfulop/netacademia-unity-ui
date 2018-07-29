@@ -27,4 +27,7 @@ public class UIWindow : MonoBehaviour {
 
         return taskCompletionSource.Task;
     }
+    
+    // igaz, ha a scale (0, 0, 0)
+    public bool IsShown => transform.localScale != Vector3.zero;
 }

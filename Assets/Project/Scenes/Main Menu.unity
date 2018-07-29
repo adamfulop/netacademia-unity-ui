@@ -1871,3 +1871,22 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b8035a80aa03eb40872d6721ff7068d, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1978893847 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1021600148438948, guid: 0b8035a80aa03eb40872d6721ff7068d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1978893846}
+--- !u!114 &1978893848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978893847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b81339f1f8e43524bad07b24664db35d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _loadSceneMode: 0
+  _loadingSceneName: 
+  _targetSceneName: High Scores

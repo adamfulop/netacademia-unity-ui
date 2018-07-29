@@ -153,6 +153,9 @@
         </e>
         <e p="Project" t="Include">
           <e p="Scripts" t="Include">
+            <e p="Common" t="Include">
+              <e p="AsyncSceneManager.cs" t="Include" />
+            </e>
             <e p="Game" t="Include">
               <e p="CameraFollow.cs" t="Include" />
               <e p="CharacterMove.cs" t="Include" />
@@ -168,15 +171,26 @@
             <e p="UI" t="Include">
               <e p="Common" t="Include">
                 <e p="ButtonBehaviour.cs" t="Include" />
+                <e p="ExitGameButton.cs" t="Include" />
                 <e p="SceneNavigationButton.cs" t="Include" />
+                <e p="SliderText.cs" t="Include" />
                 <e p="TextFlash.cs" t="Include" />
                 <e p="UIDialog.cs" t="Include" />
                 <e p="UIDialogResponseButton.cs" t="Include" />
                 <e p="UIModalOverlay.cs" t="Include" />
                 <e p="UIWindow.cs" t="Include" />
               </e>
+              <e p="Game" t="Include">
+                <e p="ContinueGameButton.cs" t="Include" />
+                <e p="GameUIController.cs" t="Include" />
+                <e p="UITimer.cs" t="Include" />
+              </e>
+              <e p="High Scores" t="Include">
+                <e p="HighScoresUIController.cs" t="Include" />
+                <e p="ScoreRecord.cs" t="Include" />
+                <e p="UIScoreRecord.cs" t="Include" />
+              </e>
               <e p="MainMenu" t="Include">
-                <e p="ExitGameButton.cs" t="Include" />
                 <e p="MainMenuController.cs" t="Include" />
                 <e p="MainMenuState.cs" t="Include" />
               </e>

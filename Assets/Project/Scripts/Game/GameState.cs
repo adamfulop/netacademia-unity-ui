@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class GameState : MonoBehaviour {
     public int WinThreshold = 8;        // ennyi pont kell a nyeréshez
+    public float TimeSeconds;
     
     private PlayerInventory _playerInventory;
     private Pickup[] _pickups;
@@ -21,13 +22,15 @@ public class GameState : MonoBehaviour {
         if (WinThreshold <= _playerInventory.PickupCount) {
             Debug.Log("A játékos nyert! :)");
         }
+
+        TimeSeconds = Time.timeSinceLevelLoad;
     }
 
     // igaz, hogyha a játékos már nem nyerhet (mert nincs elég pont a pályán ahhoz, hogy meglegyen a WinThreshold darab
     // pickup nála)
     // az összes pickup közül megszámolja azokat, amelyek active és enabled -> még felvehető pickupok
     // WinThreshold - PickupCount -> mennyi pickup kell még a játékosnak ahhoz, hogy nyerjen
-    public bool CannotWin() {
-        return _pickups.Count(p => p.isActiveAndEnabled) < WinThreshold - _playerInventory.PickupCount;
-    }
+    public bool CannotWin() => _pickups.Count(p => p.isActiveAndEnabled) < WinThreshold - _playerInventory.PickupCount;
+
+    public int Score => Mathf.Max(0, Mathf.RoundToInt(_playerInventory.PickupCount * 1000 - TimeSeconds * 10));
 }

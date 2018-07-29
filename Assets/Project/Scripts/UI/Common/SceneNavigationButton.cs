@@ -23,14 +23,17 @@ public class SceneNavigationButton : MonoBehaviour {
         _button.onClick.RemoveListener(OnClick);
     }
 
-    private void OnClick() {
+    private async void OnClick() {
         if (_loadSceneMode == LoadSceneMode.Additive && !string.IsNullOrEmpty(_loadingSceneName)) {
-            SceneManager.LoadSceneAsync(_loadingSceneName, LoadSceneMode.Additive);
+            // megvárjuk, amig a loading scene betöltődik
+            await AsyncSceneManager.LoadSceneAsync(_loadingSceneName, LoadSceneMode.Additive);
         }
         
+        // elkezdjük betölteni a cél scene-t
         var sceneLoad = SceneManager.LoadSceneAsync(_targetSceneName, _loadSceneMode);
 
         if (_loadSceneMode == LoadSceneMode.Additive && !string.IsNullOrEmpty(_loadingSceneName)) {
+            // amikor betöltődött a cél jelenet, eltávolítjuk a mostani és a loading scene-t
             sceneLoad.completed += operation => {
                 SceneManager.UnloadSceneAsync(_loadingSceneName);
                 SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
