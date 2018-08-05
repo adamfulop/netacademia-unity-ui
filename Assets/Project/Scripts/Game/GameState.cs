@@ -14,7 +14,7 @@ public class GameState : MonoBehaviour {
     }
 
     private void Update() {
-        if (CannotWin()) {
+        if (CannotWin) {
             Debug.Log("A játékos már sajnos nem nyerhet :(");
         }
         
@@ -30,7 +30,7 @@ public class GameState : MonoBehaviour {
     // pickup nála)
     // az összes pickup közül megszámolja azokat, amelyek active és enabled -> még felvehető pickupok
     // WinThreshold - PickupCount -> mennyi pickup kell még a játékosnak ahhoz, hogy nyerjen
-    public bool CannotWin() => _pickups.Count(p => p.isActiveAndEnabled) < WinThreshold - _playerInventory.PickupCount;
+    public bool CannotWin => _pickups.Count(p => p.isActiveAndEnabled) < WinThreshold - _playerInventory.PickupCount;
 
     public int Score => Mathf.Max(0, Mathf.RoundToInt(_playerInventory.PickupCount * 1000 - TimeSeconds * 10));
 }

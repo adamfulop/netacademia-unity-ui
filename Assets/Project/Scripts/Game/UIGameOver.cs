@@ -22,7 +22,7 @@ public class UIGameOver : MonoBehaviour {
 
     private void Update() {
         // ha a játékos már nem nyerhet, aktiváljuk a GameOver képernyőt
-        if (_gameState.CannotWin()) {
+        if (_gameState.CannotWin) {
             foreach (var child in _children) {
                 child.gameObject.SetActive(true);
             }

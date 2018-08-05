@@ -769,6 +769,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7967e3590b191214aac77a5677f8298d, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &444558111 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1172957117998362, guid: 7967e3590b191214aac77a5677f8298d,
+    type: 2}
+  m_PrefabInternal: {fileID: 444558110}
+--- !u!114 &444558112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 444558111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 003b0e5afeba443f899edc133686b5fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _localizationStringKey: Main Menu Title
 --- !u!224 &480718480 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224231058228307144, guid: 7967e3590b191214aac77a5677f8298d,
@@ -861,6 +878,46 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!1 &785073141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 785073143}
+  - component: {fileID: 785073142}
+  m_Layer: 0
+  m_Name: Game Settings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &785073142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 785073141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48ef8ad2b91598429da03de7dd0758a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &785073143
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 785073141}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &790036315 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1974248422901140, guid: a75e86a8970877247b6c13efa99ae08f,
@@ -1322,6 +1379,23 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224261568209360364, guid: a75e86a8970877247b6c13efa99ae08f,
     type: 2}
   m_PrefabInternal: {fileID: 1096731312}
+--- !u!1 &1145707696 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1637995982229634, guid: 0b8035a80aa03eb40872d6721ff7068d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1978893846}
+--- !u!114 &1145707697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1145707696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 003b0e5afeba443f899edc133686b5fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _localizationStringKey: High Scores Button
 --- !u!1 &1190747313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1521,6 +1595,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _splashWindow: {fileID: 1190747315}
   _mainMenuWindow: {fileID: 480718483}
+--- !u!1 &1385605056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1385605058}
+  - component: {fileID: 1385605057}
+  m_Layer: 0
+  m_Name: Localization Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1385605057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1385605056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4e9eca6f8a1a9e4fb50a4461310f2d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1385605058
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1385605056}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1779274623 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1637995982229634, guid: 0b8035a80aa03eb40872d6721ff7068d,
+    type: 2}
+  m_PrefabInternal: {fileID: 85895872}
+--- !u!114 &1779274624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1779274623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 003b0e5afeba443f899edc133686b5fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _localizationStringKey: Exit Game Button
 --- !u!1 &1900348259
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,6 +1778,23 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1900348259}
+--- !u!1 &1908404092 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1637995982229634, guid: 0b8035a80aa03eb40872d6721ff7068d,
+    type: 2}
+  m_PrefabInternal: {fileID: 933043693}
+--- !u!114 &1908404093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1908404092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 003b0e5afeba443f899edc133686b5fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _localizationStringKey: Settings Button
 --- !u!1 &1919760160 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1292886590910422, guid: 7967e3590b191214aac77a5677f8298d,
@@ -1890,3 +2038,20 @@ MonoBehaviour:
   _loadSceneMode: 0
   _loadingSceneName: 
   _targetSceneName: High Scores
+--- !u!1 &2069330432 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1637995982229634, guid: 0b8035a80aa03eb40872d6721ff7068d,
+    type: 2}
+  m_PrefabInternal: {fileID: 235999128}
+--- !u!114 &2069330433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2069330432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 003b0e5afeba443f899edc133686b5fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _localizationStringKey: Start Game Button

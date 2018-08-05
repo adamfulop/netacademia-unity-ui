@@ -9,7 +9,7 @@ public class UIWindow : MonoBehaviour {
         transform.localScale = Vector3.zero;    // kezdetben scale 0
     }
 
-    public void Show() {
+    public virtual void Show() {
         transform
             .DOScale(1, _tweenDurationSeconds)    // scale-t 1-re animáljuk _tweenDurationSeconds másodperc alatt
             .SetEase(Ease.OutBounce);            // animáció legyen "pattogós"

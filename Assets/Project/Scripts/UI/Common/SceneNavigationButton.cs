@@ -23,7 +23,7 @@ public class SceneNavigationButton : MonoBehaviour {
         _button.onClick.RemoveListener(OnClick);
     }
 
-    private async void OnClick() {
+    protected virtual async void OnClick() {
         if (_loadSceneMode == LoadSceneMode.Additive && !string.IsNullOrEmpty(_loadingSceneName)) {
             // megvárjuk, amig a loading scene betöltődik
             await AsyncSceneManager.LoadSceneAsync(_loadingSceneName, LoadSceneMode.Additive);

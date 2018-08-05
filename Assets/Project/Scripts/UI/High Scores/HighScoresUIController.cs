@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
+using Newtonsoft.Json;
 using UnityEngine;
 
 public class HighScoresUIController : MonoBehaviour {
@@ -11,8 +11,7 @@ public class HighScoresUIController : MonoBehaviour {
     private void Start() {
         _window.Show();
 
-        var scores = LoadScores();
-        ShowScores(scores);
+        ShowScores(Scores);
     }
 
     // pontszámok megjelenítése (1 prefab példány 1 pontszámot jelenít meg)
@@ -23,15 +22,6 @@ public class HighScoresUIController : MonoBehaviour {
         }
     }
 
-    // pontszámok betöltése (egyelőre csak placeholder megoldás)
-    private List<ScoreRecord> LoadScores() {
-        return new List<ScoreRecord> {
-                new ScoreRecord {Name = "F. Ádám", Score = 13000},
-                new ScoreRecord {Name = "Péter", Score = 5000},
-                new ScoreRecord {Name = "Marcell", Score = 8000},
-                new ScoreRecord {Name = "Ádám", Score = 3000}
-            }
-            .OrderByDescending(r => r.Score)
-            .ToList();
-    }
+    // pontszámok betöltése a PlayerPrefsből (ha még nincs ilyen kulcs, akkor üres JSON tömbre inicializáljuk)
+    private List<ScoreRecord> Scores => JsonConvert.DeserializeObject<List<ScoreRecord>>(PlayerPrefs.GetString("highScores", "[]"));
 }

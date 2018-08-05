@@ -11,12 +11,20 @@ public class CharacterMove : MonoBehaviour {
 
     private const float TOLERANCE = 0.01f;
     
+    private GameSettings _gameSettings;
+    
     // más komponensek referenciáinak inicializálása
     // (sima GetComponent<>() -> ugyanazon a GameObjecten keressük a komponenseket)
     private void Awake() {
         _animator = GetComponent<Animator>();
         _audioSource = GetComponent<AudioSource>();
         _rigidbody = GetComponent<Rigidbody>();
+    }
+    
+    private void Start() {
+        var gameSettingsManager = FindObjectOfType<GameSettingsManager>();
+        _gameSettings = gameSettingsManager.GameSettings;
+        _audioSource.volume = _gameSettings.Volume;
     }
 
     private void FixedUpdate() {
@@ -28,7 +36,8 @@ public class CharacterMove : MonoBehaviour {
 
         Move(inputHorizontal, inputVertical);
         SetAnimation(inputHorizontal, inputVertical);
-        SetAudio(inputHorizontal, inputVertical);
+        
+        if (_gameSettings.IsAudioEnabled) SetAudio(inputHorizontal, inputVertical);
     }
     
     private void SetAudio(float inputHorizontal, float inputVertical) {

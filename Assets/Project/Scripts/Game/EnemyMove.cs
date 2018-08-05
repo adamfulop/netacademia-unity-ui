@@ -9,6 +9,12 @@ public class EnemyMove : MonoBehaviour {
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _player = GameObject.FindGameObjectWithTag("Player").transform;
     }
+    
+    private void Start() {
+        var gameSettingsManager = FindObjectOfType<GameSettingsManager>();
+        var difficulty = gameSettingsManager.GameSettings.Difficulty;
+        _navMeshAgent.speed *= 1 + 0.1f * difficulty;
+    }
 
     private void Update() {
         // minden pillanatban a játékos pozíciója a célja a zombinak
